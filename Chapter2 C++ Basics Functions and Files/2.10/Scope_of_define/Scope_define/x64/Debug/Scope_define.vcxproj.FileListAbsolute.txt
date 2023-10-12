@@ -1,0 +1,1 @@
+D:\DEV\Dev\cplusplus\cplusplus_notes\Chapter2 C++ Basics Functions and Files\2.10\Scope_of_define\Scope_define\x64\Debug\Scope_define.exe
