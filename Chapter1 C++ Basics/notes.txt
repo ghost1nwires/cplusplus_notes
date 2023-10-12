@@ -1,0 +1,5 @@
+1. check place solution & project
+create your own windows app using a wizard
+2. uncheck precompiled header
+3. (optional) create directory for solution
+4. check security developmet cycle (SDL) checks
