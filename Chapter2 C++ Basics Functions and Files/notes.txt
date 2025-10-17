@@ -1,0 +1,22 @@
+Function initiate f(x) is called caller, function being called is callee or called function
+
+A function is a reusable sequence of statements designed to do a particular job
+
+Every program must have function named main to start execution when it is run
+
+Most programs use many functions.
+
+C++ programs can work the same way. A program will be executing statements sequentially inside one function when it encounters a function call. A function call is an expression that tells the CPU to interrupt the current function and execute another function. The CPU “puts a bookmark” at the current point of execution, and then calls (executes) the function named in the function call. When the called function ends, the CPU returns back to the point it bookmarked, and resumes execution
+
+Example of user-defined function
+
+returnType functionName() // This is the function header (tells the compiler about the existence of the function)
+{
+    // This is the function body (tells the compiler what the function does)
+}
+
+
+Nested functions are not supported in C++
+
+
+
