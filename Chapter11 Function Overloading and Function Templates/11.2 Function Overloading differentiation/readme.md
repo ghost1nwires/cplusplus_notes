@@ -7,12 +7,12 @@ In this lesson, we’ll take a closer look at how overloaded functions are diffe
 ## Overload based on number of parameters
 
 ```
-int add(int x, int y)
+int add(int x, int y) // here 2 parameters
 {
     return x + y;
 }
 
-int add(int x, int y, int z)
+int add(int x, int y, int z) // here are 3 parameters
 {
     return x + y + z;
 }
@@ -28,3 +28,30 @@ double add(double x, int y); mixed version
 
 ```
 
+However yeorobun....
+
+### The return type of a function is not considered for differentiation
+
+A function return type is not considered when differentiating overloaded function.
+
+because when u tempted to write like this..
+
+```
+int getRandomValue();
+double getRandomValue();
+```
+we might face an error C2556
+
+this makes sense because, as compiler, u saw this statement:
+
+```
+getRandomValue();
+```
+
+#### Name mangling
+
+When the compiler compiles a function, it performs name mangling, which means the compiled name of the function is altered (“mangled”) based on various criteria, such as the number and type of parameters, so that the linker has unique names to work with.
+
+For example, a function with prototype int fcn() might compile to mangled name __fcn_v, whereas int fcn(int) might compile to mangled name __fcn_i. So while in the source code, the two overloaded functions share the name fcn(), in compiled code, the mangled names are unique (__fcn_v vs __fcn_i).
+
+There is no standardization on how names should be mangled, so different compilers will produce different mangled names.
