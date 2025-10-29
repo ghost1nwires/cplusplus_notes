@@ -9,4 +9,5 @@ int main()
     std::cout << f << '\n';             // print f (containing the bits from n)
 
     return 0;
+
 }
