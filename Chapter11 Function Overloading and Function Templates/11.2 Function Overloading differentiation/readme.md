@@ -6,7 +6,7 @@ In this lesson, we’ll take a closer look at how overloaded functions are diffe
 
 ## Overload based on number of parameters
 
-```
+```c++
 int add(int x, int y) // here 2 parameters
 {
     return x + y;
@@ -20,7 +20,7 @@ int add(int x, int y, int z) // here are 3 parameters
 
 ## Overload based on type of parameters
 
-```
+```c++
 int add(int x, int y); //integer version
 double add(double x, double y);
 double add(int x, double y); mixed version
@@ -36,7 +36,7 @@ A function return type is not considered when differentiating overloaded functio
 
 because when u tempted to write like this..
 
-```
+```c++
 int getRandomValue();
 double getRandomValue();
 ```

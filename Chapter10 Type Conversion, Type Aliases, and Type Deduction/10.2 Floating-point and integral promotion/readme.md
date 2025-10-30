@@ -34,7 +34,7 @@ This automatic conversion is called a numeric promotion.
 It’s always safe — no data is lost — so the compiler does it automatically without warning you.
 
 🧠 Example:
-```
+```c++
 char c = 5;
 int result = c + 2;  // 'c' is promoted to int automatically
 ```
@@ -44,7 +44,7 @@ int result = c + 2;  // 'c' is promoted to int automatically
 Here, `char` → `int` is a numeric promotion.
 
 ### Numeric promotion reduced redundancy 
-```
+```c++
 #include <iostream>
 
 void printInt(int x)

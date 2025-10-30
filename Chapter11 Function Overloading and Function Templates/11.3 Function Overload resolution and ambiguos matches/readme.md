@@ -12,7 +12,7 @@ Since a function call can only resolve to one of them, the compiler has to deter
 
 With non overloaded functions, each function call will resolve to a function, but if nor match found the compiler will issue compile error
 
-```
+```c++
 void foo()
 {
 }

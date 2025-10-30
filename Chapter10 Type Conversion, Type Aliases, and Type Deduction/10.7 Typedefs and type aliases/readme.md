@@ -2,13 +2,13 @@
 
 `using`   is keyword that will create an alias for data type. Create alias data type by put `using` in front of data type followed by equals sign and existing data type. For example,  
 
-```
+```c++
 using Distance = double; // defines Distance as an alias to double
 ```
 
 When the compiler encounters a type alias name, it will substitute in the aliased type. For example:
 
-```
+```c++
 #include <iostream>
 
 int main()
@@ -38,7 +38,7 @@ POSIX used this, so if we used this, it will caused type naming conflix in POSIX
 
 In modern C++ convention is to name type aliases (or any other type) that you define yourself starting with a capital letter, and using no suffix. 
 
-```
+```c++
 void printDistance(Distance distance); // Distance is some defined type
 ```
 
@@ -51,7 +51,7 @@ A type alias defined inside a block has block scope and is usable only within th
 If you need to use one or more type aliases across multiple files, they can be defined in a header file and #included into any code files that needs to use the definition:
 
 
-```
+```c++
 #ifndef MYTYPES_H
 #define MYTYPES_H
 
@@ -65,12 +65,12 @@ If you need to use one or more type aliases across multiple files, they can be d
 
 A typedef (which is short for “type definition”) is an older way of creating an alias for a type. To create a typedef alias, we use the typedef keyword:
 
-```
+```c++
 typedef Distance double; // incorrect (typedef name first)
 typedef double Distance; // correct (aliased type name first)
 ```
 
-```
+```c++
 typedef int (*FcnType)(double, char); // FcnType hard to find
 using FcnType = int(*)(double, char); // FcnType easier to find
 ```

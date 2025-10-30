@@ -8,7 +8,7 @@ We can delete function, when they do not well behave.
 
 For example:
 
-```
+```c++
 #include <iostream>
 
 void printInt(int x)
@@ -37,7 +37,7 @@ int main()
 Deleting a bunch of individual function overloads works fine, but can be verbose. There may be times when we want a certain function to be called only with arguments whose types exactly match the function parameters. We can do this by using a function template (introduced in upcoming lesson 11.6 -- Function templates) as follows:
 
 
-```
+```c++
 #include <iostream>
 
 // This function will take precedence for arguments of type int

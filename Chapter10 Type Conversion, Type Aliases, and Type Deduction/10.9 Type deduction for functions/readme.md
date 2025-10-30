@@ -8,7 +8,7 @@ Functions that use an auto return type must be fully defined before they can be 
 
 For example:
 
-```
+```c++
 #include <iostream>
 
 auto foo();
