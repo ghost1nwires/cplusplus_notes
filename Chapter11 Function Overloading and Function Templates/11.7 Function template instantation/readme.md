@@ -10,7 +10,7 @@ The process of creating functions (with specific types) from function templates 
 
 To use our max<T> We can use like this 
 
-```
+```c++
 max<actual_type>(arg1, arg2); // actual_type is some actual type, like int or double
 ```
 
