@@ -10,7 +10,7 @@ Default arguments are an excellent option when a function needs a value that has
 
 Did u know that a function can have multiple parameters with default arguments
 
-```
+```c++
 #include <iostream>
 
 void print(int x=10, int y=20, int z=30)
@@ -35,7 +35,7 @@ Once declared, a default argument can not be redeclared in the same translation 
 
 Here is the example of failure
 
-```
+```c++
 #include <iostream>
 
 void print(int x, int y=4); // forward declaration
