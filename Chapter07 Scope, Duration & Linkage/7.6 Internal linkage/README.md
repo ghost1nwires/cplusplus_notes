@@ -8,7 +8,8 @@ is only visible inside the same .cpp file where it’s defined.
 Other files can’t see or use it, even if they have something with the same name.
 
 So if you have two files like this:
-```
+
+```c++
 // file1.cpp
 static int counter = 5;
 
@@ -18,7 +19,7 @@ static int counter = 10;
 
 ### Quick summary
 
-```
+```c++
 // Internal global variables definitions:
 static int g_x;          // defines non-initialized internal global variable (zero initialized by default)
 static int g_x{ 1 };     // defines initialized internal global variable
