@@ -34,7 +34,7 @@ int main ()
 ```
 
 the output is:
-```
+```c#
 The address of x is: 0x7ffd16574de0
 The address of the value parameter is: 0x7ffd16574de4
 The address of the reference parameter is: 0x7ffd16574de0
