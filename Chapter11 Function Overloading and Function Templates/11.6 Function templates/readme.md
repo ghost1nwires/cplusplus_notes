@@ -20,6 +20,7 @@ C++ supports 3 diff kind of templates
 
 Preferrably to use single char T as to refer to `template` 
 
+
 For example:
  ```c++
  template <typename T>
@@ -28,5 +29,5 @@ For example:
     return (x<y) ? y:x;
  }
  ```
-
+ 
  
