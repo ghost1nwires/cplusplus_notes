@@ -72,7 +72,7 @@ int main()
 ```
 
 It print
-```
+```c++
 value = 5
 value = 6
 ```
