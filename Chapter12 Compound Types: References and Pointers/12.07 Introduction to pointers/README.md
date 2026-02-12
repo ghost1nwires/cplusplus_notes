@@ -77,9 +77,9 @@ In this example, ptr points to the memory location of num, denoted using &num. T
 
 Sometimes we need to declare a pointer in advance, even if we don’t yet have a variable for it to point to—for example, when a pointer will later be assigned dynamically allocated memory or a value returned by a function. In such cases, we should initialize the pointer with nullptr. This prevents it from pointing to random memory and makes it safer to check before using it:
 
+```c++
 int* ptr = nullptr; // Safe initialization, does not point anywhere 
-
-Copy to clipboard
+```
 
 If we attempt to dereference a null pointer, the program will typically crash or throw a runtime error instead of silently reading or writing garbage memory. This makes bugs easier to detect. By initializing a pointer with nullptr, we ensure it doesn’t accidentally access random memory, and we can safely check whether it points to a valid location before using it:
 
@@ -89,5 +89,47 @@ if (ptr != nullptr) {
 } 
 ```
 
+## Type of pointer
 
+Different type of pointer depend on how they are used and what they point to. 
+
+### Null pointer
+
+Null pointer does not point to any memory location. It is represented using keyword `nullptr`. Using `nullptr` helps ensure that pointer does not accidentally reference garbage memory.
+
+For example
+
+```c++
+int* ptr = nullptr;
+
+if (ptr!= nullptr) {
+    *ptr = 10;
+} else {
+    std::cout << "Pointer ni null, cannot lah assign value \n";
+}
+```
+
+### Void pointer
+
+Void pointer also known as generic pointer that can hold memory address of any data type, but cannot dereferenced directly without typecasting.
+
+> Typecasting = explicitly converting one data type to another so the compiler knows how to interpret the data.
+
+> static casting:
+
+```c++
+void* ptr; 
+int x = 10; 
+ptr = &x;    // Void pointer holding the address of x 
+cout << *((int*)ptr);     // Output: 10 (Cast needed to access value) 
+```
+
+### Pointer Lexicon
+
+`type *ptr` A pointer of type named ptr
+`*ptr` The value of whatever ptr is pointed at
+`*(ptr + i)` The value of (whatever ptr is pointed at plus i)
+`&thing` The address of thing
+`type *ptr = &thing` A pointer of type named ptr set to the address of thing
+`ptr++` Increment where ptr points
 

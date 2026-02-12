@@ -15,7 +15,7 @@ int add(int x, int y) // even though the body of add() isn't defined until here
 
 /*
 Now when the compiler reaches the call to add in main, it will know what add looks like (a function that takes two integer parameters and returns an integer), 
-and it won’t complain.
+and it won't complain.
 
 It is worth noting that function declarations do not need to specify the names of the parameters (as they are not considered to be part of the 
 function declaration).*/

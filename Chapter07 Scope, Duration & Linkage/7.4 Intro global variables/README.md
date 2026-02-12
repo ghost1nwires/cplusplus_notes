@@ -14,7 +14,7 @@ Global variables can also be defined inside a user-defined namespace.
 
 Quick summary
 
-```
+```c++
 // Non-constant global variables
 int g_x;                 // defines non-initialized global variable (zero initialized by default)
 int g_x {};              // defines explicitly value-initialized global variable

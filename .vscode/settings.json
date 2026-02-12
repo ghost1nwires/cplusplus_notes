@@ -1,3 +1,4 @@
 {
-    "pomodoro.workTime": 35
+    "pomodoro.workTime": 35,
+    "C_Cpp.errorSquiggles": "disabled"
 }
