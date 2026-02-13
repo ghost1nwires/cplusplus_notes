@@ -124,12 +124,30 @@ ptr = &x;    // Void pointer holding the address of x
 cout << *((int*)ptr);     // Output: 10 (Cast needed to access value) 
 ```
 
-### Pointer Lexicon
 
-`type *ptr` A pointer of type named ptr
-`*ptr` The value of whatever ptr is pointed at
-`*(ptr + i)` The value of (whatever ptr is pointed at plus i)
-`&thing` The address of thing
-`type *ptr = &thing` A pointer of type named ptr set to the address of thing
-`ptr++` Increment where ptr points
+### Dangling pointer
+A dangling pointer is one that points to memory that has already been freed or deleted.
 
+```c++
+int* ptr = new int(5); 
+delete ptr; // Memory freed 
+// ptr is now dangling (Invalid memory reference) 
+```
+
+### Wild pointer
+A wild pointer is an uninitialized pointer that points to a random memory location. Dereferencing such a pointer is dangerous because it can cause undefined behavior, crashes, or data corruption:
+
+```c++
+int* ptr; // Wild pointer (Not initialized) 
+*ptr = 10; // Dangerous 
+```
+
+### Constant pointer
+A constant pointer is a pointer that, once initialized, cannot point to a different address, but the value stored at that address can still be modified
+
+```c++
+int x = 5, y = 10; 
+int* const ptr = &x;   
+*ptr = 20; // Allowed 
+// ptr = &y; // Not allowed 
+```
